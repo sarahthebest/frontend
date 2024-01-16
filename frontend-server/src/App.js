@@ -1,4 +1,3 @@
-cat > src/App.js << 'EOF'
 import React, { useState } from 'react';
 import './App.css';
 
