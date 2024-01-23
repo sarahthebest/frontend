@@ -17,7 +17,7 @@ function App() {
       
       if (!response.ok) {
         throw new Error('Login failed');
-      }
+      } 
 
       const result = await response.json();
       localStorage.setItem('access_token', result.token);
@@ -44,6 +44,9 @@ function App() {
         if (response.status === 401) {  // Unauthorized
           handleLogout();
           alert('Session expired. Please login again.');
+          return;
+        } else if (response.status === 403){ //  access to the requested resource is forbidden. 
+          alert ('Access denied.');
           return;
         }
         throw new Error('Failed to fetch data from backend');
