@@ -64,8 +64,8 @@ function App() {
       <header className="App-header">
         {isAuthenticated ?
           <>
-            {data ? <p>{data}</p> : <button onClick={fetchData}>Fetch Data</button>}
-            <button onClick={handleLogout}>Logout</button>
+            {data ? <p>{data}</p> : <button onClick={fetchData} className="fetch-data-button">Fetch Data</button>}
+            <button onClick={handleLogout} className="logout-button">Logout</button>
           </> :
           (<div className="login-container">
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="input-field" />

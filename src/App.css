@@ -1,15 +1,27 @@
 
-.App {
-  text-align: center;
+/* Bootstrap classes for layout and spacing */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #2C2C54; /* Dark blue background color */
+  height: 100%;
+}
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background color */
+  padding: 20px; /* Add some padding for better readability */
+  border-radius: 10px; /* Rounded corners for a nicer look */
 }
+
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2C2C54; /* Dark blue background color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,12 +31,15 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
+
+/* Custom styles */
 .login-container {
-  background-color: #444;
+  background-color: #ECECEC;
   border-radius: 5px;
   padding: 20px;
   max-width: 300px;
@@ -40,7 +55,9 @@
   border-radius: 4px;
 }
 
-.login-button {
+.login-button,
+.fetch-data-button,
+.logout-button {
   background-color: #61dafb;
   color: #fff;
   border: none;
@@ -48,10 +65,16 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 10px; /* Add some top margin to separate buttons */
 }
 
-.login-button:hover {
+.login-button:hover,
+.fetch-data-button:hover,
+.logout-button:hover {
   background-color: #21a1f1;
 }
 
-
+.App p {
+  font-size: 20px;
+  color: #333; /* Dark text color for better contrast on the light background */
+}
